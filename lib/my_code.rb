@@ -2,10 +2,10 @@ def map(s)
   new = []
   i = 0
   while i < s.length
-    new.push(yield(s[i]))
+    new << yield(s[i])
     i += 1
   end
-  new
+new
 end
 
 def reduce(s, sp=nil)
@@ -22,3 +22,7 @@ def reduce(s, sp=nil)
   end
   accum
 end
+
+puts map[2, 4, 6, 8]{|s| s*2}
+
+puts reduce[4, 5, 6]{|s|}
